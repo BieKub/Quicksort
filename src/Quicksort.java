@@ -17,8 +17,10 @@ public class Quicksort {
     } 
 
      public static int partition(int[] arr, int low, int high)
-     {
-         // Choosing the pivot
+     { 
+        // int low and high define the permiters of witch to be sorted 
+
+         // Choosing the pivot/ the initial value being compaired
          int pivot = arr[high];
  
          // Index of smaller element and indicates
@@ -40,7 +42,8 @@ public class Quicksort {
      }  
 
       public static void quickSort(int[] arr, int low, int high)
-     {
+     { 
+            //ansures the entered indexies are in right order
          if (low < high) {
  
              // pi is partitioning index, arr[p]
@@ -52,6 +55,33 @@ public class Quicksort {
              quickSort(arr, low, pi - 1);
              quickSort(arr, pi + 1, high);
          }
-     } 
+     }  
 
+     public static void main(String[] args) 
+     { 
+        int[] a = new int[]{987, 2, 45, 2, 4, 12, 409, 1,}; 
+        int N = a.length;
+        quickSort(a, 0, N-3);
+        printArray(a);
+        
+        
+
+     }
+ 
+
+     public static void Test(String[] args) throws Exception{
+    {
+        
+    System.currentTimeMillis();
+
+    long startTime = System.nanoTime();
+
+    long endTime = System.nanoTime();
+
+    long timeElapsed = (endTime - startTime);
+    
+    System.out.println("Processing Time: " + timeElapsed + "ns");
+
+     } 
+} 
 }
