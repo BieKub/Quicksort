@@ -1,16 +1,22 @@
 public class Test {
     public static void main(String[] args) throws Exception {
 
-    System.currentTimeMillis();
+        int[] a = {2, 1, 3}; 
+        int N = a.length;
 
-    long startTime = System.nanoTime();
+        System.currentTimeMillis();
+        long startTime = System.nanoTime();
 
-    long endTime = System.nanoTime();
+        Quicksort.quickSort(a, 0, N-1);
 
-    long timeElapsed = (endTime - startTime);
-    
-    System.out.println("Processing Time: " + timeElapsed + "ns");
-
+        long endTime = System.nanoTime();
+        long timeElapsed = (endTime - startTime);
+        
+        Quicksort.printArray(a); 
+        System.out.println("Comparisson count: " + Quicksort.getCom()); 
+        System.out.println("Successfull swap: " + Quicksort.getSwp());
+        System.out.println("Time Elapsed:" + timeElapsed);
+        
 
 
     }

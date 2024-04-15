@@ -1,7 +1,19 @@
 public class Quicksort { 
-    public static int com=0; 
-    public static int swp =0;
     
+    public static int com = 0; 
+    public static int swp = 0;
+    
+    public static int getCom()
+    {
+            return com;
+    }
+
+    public static int getSwp()
+    {
+            return swp;
+    }
+
+
     public static void swap(int[] arr, int i, int j)
     {
             int temp = arr[i];
@@ -65,19 +77,6 @@ public class Quicksort {
      public static void main(String[] args) 
      { 
         
-        int[] a = new int[]{}; 
-        int N = a.length;
-        System.currentTimeMillis();
-        long startTime = System.nanoTime();
-        quickSort(a, 0, N-1);
-        long endTime = System.nanoTime();
-
-        long timeElapsed = (endTime - startTime);
-        
-        
-        printArray(a); 
-        System.out.println("Comparisson count"+com); 
-        System.out.println("Successfull swap"+swp);
         
 
 
