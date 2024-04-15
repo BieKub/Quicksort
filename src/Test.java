@@ -1,7 +1,7 @@
 public class Test {
     public static void main(String[] args) throws Exception {
 
-        int[] a = {2, 1, 3}; 
+        int[] a = {7, 2, 1, 8, 6, 3, 5, 4}; 
         int N = a.length;
 
         System.currentTimeMillis();
@@ -16,8 +16,9 @@ public class Test {
         System.out.println("Comparisson count: " + Quicksort.getCom()); 
         System.out.println("Successfull swap: " + Quicksort.getSwp());
         System.out.println("Time Elapsed:" + timeElapsed);
+
+
+        Object[] o = {new Object(7, "Tim"), new Object(2, "Tim"), new Object(1, "Tim"), new Object(8, "Tim"), new Object(6, "Tim"), new Object(3, "Tim"), new Object(5, "Tim"), new Object(4, "Tim")};
         
-
-
     }
 }

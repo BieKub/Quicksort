@@ -1,4 +1,4 @@
-public class Quicksort { 
+public class Objectsort { 
     
     private static int com = 0; 
     private static int swp = 0;
@@ -13,9 +13,9 @@ public class Quicksort {
             return swp;
     }
 
-    public static void swap(int[] arr, int i, int j)
+    public static void swap(Object[] arr, int i, int j)
     {
-            int temp = arr[i];
+            Object temp = arr[i];
             arr[i] = arr[j];
             arr[j] = temp; 
             swp++;
@@ -73,5 +73,24 @@ public class Quicksort {
          }
      }  
 
+     public static void main(String[] args) 
+     { 
+        
+        
 
+
+     }
+ 
+
+     public static void Test(String[] args) throws Exception{
+    {
+        
+   
+
+  
+
+   
+
+     } 
+} 
 }
