@@ -21,7 +21,7 @@ public class Test {
         System.out.println("Comparisson count: " + Quicksort.getCom()); 
         System.out.println("Successfull swap: " + Quicksort.getSwp());
         System.out.println("Time Elapsed:" + timeElapsed);
-
+        
 /* 
         Object[] a = {new Object(1, "Jakub"), new Object(2, "Kaune"), new Object(7, "Anthony"), new Object(8, "Ire"), new Object(6, "Tim"), new Object(3, "Bob"), new Object(5, "Kevin"), new Object(4, "Chris")};
         int N = a.length;
@@ -38,21 +38,6 @@ public class Test {
         System.out.println("Comparisson count: " + Quicksort.getCom()); 
         System.out.println("Successfull swap: " + Quicksort.getSwp());
         System.out.println("Time Elapsed:" + timeElapsed);
-
-*/
-
-
-
-
-
-
-
-
-
-
-
-        
-
-        
+*/      
     }
 }
