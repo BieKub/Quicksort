@@ -1,3 +1,5 @@
+
+import java.util.ArrayList;
 /**
  * Implementation of the Objectsort class for sorting objects using Quicksort algorithm.
  */
@@ -28,10 +30,10 @@ public class Objectsort {
      * @param i The index of the first element to be swapped.
      * @param j The index of the second element to be swapped.
      */
-    public static void swap(Object[] arr, int i, int j) {
-        Object temp = arr[i];
-        arr[i] = arr[j];
-        arr[j] = temp; 
+    public static void swap(ArrayList<Object>  arr, int i, int j) {
+        Object temp = arr.get(i);
+        arr.set(i, arr.get(j)); 
+        arr.set(j,temp); 
         swp++;
     }
 
@@ -53,14 +55,14 @@ public class Objectsort {
      * @param high The ending index of the partition.
      * @return The index of the pivot element.
      */
-    public static int partition(Object[] arr, int low, int high) { 
-        int pivot = arr[high].getAge();
+    public static int partition(ArrayList<Object> arr, int low, int high) { 
+        String pivot = arr.get(high).getString();
         int i = (low - 1);
             
         for (int j = low; j <= high - 1; j++) {
             com++;
 
-            if (arr[j].getAge() < pivot) {
+            if ( (arr.get(i).getString()).compareTo(pivot) < 0) {
                 i++;
                 swap(arr, i, j);
             }
@@ -75,7 +77,7 @@ public class Objectsort {
      * @param low The starting index of the array.
      * @param high The ending index of the array.
      */
-    public static void quickSort(Object[] arr, int low, int high) { 
+    public static void quickSort( ArrayList<Object> arr, int low, int high) { 
         if (low < high) {
             int pi = partition(arr, low, high);
             quickSort(arr, low, pi - 1);

@@ -60,7 +60,7 @@ public class Quicksort {
         for (int j = low; j <= high - 1; j++) {
             com++;
 
-            if (arr[j] < pivot) {
+            if (arr[j] > pivot) {
                 i++;
                 swap(arr, i, j);
             }
