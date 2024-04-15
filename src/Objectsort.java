@@ -21,21 +21,21 @@ public class Objectsort {
             swp++;
     }
 
-    public static void printArray(int[] arr)
+    public static void printArray(Object[] arr)
     {
         for (int i = 0; i < arr.length; i++)
         {
-            System.out.print(arr[i] + " ");
+            System.out.print(arr[i].toString() + " ");
         }
         System.out.println();
     } 
 
-     public static int partition(int[] arr, int low, int high)
+     public static int partition(Object[] arr, int low, int high)
      { 
         // int low and high define the permiters of witch to be sorted 
 
          // Choosing the pivot/ the initial value being compaired
-         int pivot = arr[high];
+         int pivot = arr[high].getAge();
  
          // Index of smaller element and indicates
          // the right position of pivot found so far
@@ -45,7 +45,7 @@ public class Objectsort {
             com++;
              // If current element is smaller than the pivot 
 
-             if (arr[j] < pivot) {
+             if (arr[j].getAge() < pivot) {
  
                  // Increment index of smaller element
                  i++;
@@ -56,7 +56,7 @@ public class Objectsort {
          return (i + 1);
      }  
 
-      public static void quickSort(int[] arr, int low, int high)
+      public static void quickSort(Object[] arr, int low, int high)
      { 
        
             //ansures the entered indexies are in right order
@@ -73,24 +73,4 @@ public class Objectsort {
          }
      }  
 
-     public static void main(String[] args) 
-     { 
-        
-        
-
-
-     }
- 
-
-     public static void Test(String[] args) throws Exception{
-    {
-        
-   
-
-  
-
-   
-
-     } 
-} 
 }

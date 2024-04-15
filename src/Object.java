@@ -12,16 +12,19 @@ public class Object {
     }
 
  
-    public  int getAge() {
+    public int getAge() {
 
         return Indiviual_age;
     }
 
-    public  String getString() {
+    public String getString() {
 
         return Indiviual_name;
     }
 
-    
+    public String toString() {
+
+        return "(" + Indiviual_name + ": " + Indiviual_age + ")";
+    }
 
 }
