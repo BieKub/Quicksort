@@ -56,16 +56,32 @@ public class Objectsort {
      * @return The index of the pivot element.
      */
     public static int partition(ArrayList<Object> arr, int low, int high) { 
-        String pivot = arr.get(high).getString();
+        
+        String pivot = (arr.get(high)).getString();
+
+        int pivot_intVer = (arr.get(high)).getAge();
+
         int i = (low - 1);
             
         for (int j = low; j <= high - 1; j++) {
             com++;
+            System.err.println("counted");
+            
+            //If needing to compare integers (Ages)
 
-            if ( (arr.get(i).getString()).compareTo(pivot) < 0) {
+            if ((arr.get(j)).getAge() > pivot_intVer) {
                 i++;
                 swap(arr, i, j);
             }
+
+
+            //If needing to compare Strings (Names)
+            /* 
+            if ( (arr.get(j).getString()).compareTo(pivot) < 0) {
+                i++;
+                swap(arr, i, j);
+            }
+            */
         }
         swap(arr, i + 1, high);
         return (i + 1);

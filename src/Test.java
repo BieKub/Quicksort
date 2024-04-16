@@ -54,21 +54,32 @@ public class Test {
         System.out.println("Time Elapsed:" + timeElapsed);
         */
 
-        Object[] a = {new Object(1, "Jakub"), new Object(2, "Kaune"), new Object(7, "Anthony"), new Object(8, "Ire"), new Object(6, "Tim"), new Object(3, "Bob"), new Object(5, "Kevin"), new Object(4, "Chris")};
-        int N = a.length;
-        ArrayList<Object> listPeople = Object.generatePerson(name_List,500);
-        int p = listPeople.size();
+        
+       
+        //Use for generation of object list
+        ArrayList<Object> listPeople = Object.generatePerson(name_List,50);
+       
         System.currentTimeMillis();
         long startTime = System.nanoTime();
 
-        Objectsort.quickSort(listPeople, 0, listPeople.size() -1 );
+
+        //System.err.println(listPeople.get(0));
+
+
+        Objectsort.quickSort(listPeople, 0, listPeople.size()-1 );
 
         long endTime = System.nanoTime();
         long timeElapsed = (endTime - startTime);
         
-        Objectsort.printArray(a); 
+        System.err.println(listPeople);
+        /* 
         System.out.println("Comparisson count: " + Quicksort.getCom()); 
         System.out.println("Successfull swap: " + Quicksort.getSwp());
+        */
+
+        System.out.println("Comparisson count: " + Objectsort.getCom()); 
+        System.out.println("Successfull swap: " + Objectsort.getSwp());
+
         System.out.println("Time Elapsed:" + timeElapsed);
     
     }
