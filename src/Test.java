@@ -57,7 +57,7 @@ public class Test {
         
        
         //Use for generation of object list
-        ArrayList<Object> listPeople = Object.generatePerson(name_List,50);
+        ArrayList<Object> listPeople = Object.generatePerson(name_List,10000000);
        
         System.currentTimeMillis();
         long startTime = System.nanoTime();
@@ -71,7 +71,7 @@ public class Test {
         long endTime = System.nanoTime();
         long timeElapsed = (endTime - startTime);
         
-        System.err.println(listPeople);
+        //System.err.println(listPeople);
         /* 
         System.out.println("Comparisson count: " + Quicksort.getCom()); 
         System.out.println("Successfull swap: " + Quicksort.getSwp());

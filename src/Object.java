@@ -56,7 +56,8 @@ public class Object {
 
     /**
      * Generates an arraylist filled with person objects
-     * @pre arraylist created for the person objects
+     * @pre arrayList for names to choose from 
+     * @pre arrayList created for the person objects
      * @param nameList The array that holds the avaliable names to be used for generation.
      * @param amount An int that indicates the amount of people objects to be generated.
      * @return a generated arraylist of person objects
